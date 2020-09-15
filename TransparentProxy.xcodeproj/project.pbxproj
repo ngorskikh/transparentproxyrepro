@@ -12,7 +12,35 @@
 		1D9C6E04250FA8BD0077B302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D9C6E03250FA8BD0077B302 /* Assets.xcassets */; };
 		1D9C6E07250FA8BD0077B302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D9C6E05250FA8BD0077B302 /* Main.storyboard */; };
 		1D9C6E0A250FA8BD0077B302 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9C6E09250FA8BD0077B302 /* main.m */; };
+		1D9C6E1A250FA9190077B302 /* AppProxyProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9C6E19250FA9190077B302 /* AppProxyProvider.m */; };
+		1D9C6E1F250FA9190077B302 /* TheExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1D9C6E16250FA9190077B302 /* TheExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1D9C6E26250FA92E0077B302 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9C6E25250FA92E0077B302 /* NetworkExtension.framework */; };
+		1D9C6E27250FA99C0077B302 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9C6E25250FA92E0077B302 /* NetworkExtension.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D9C6E1D250FA9190077B302 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D9C6DF2250FA8BD0077B302 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D9C6E15250FA9190077B302;
+			remoteInfo = TheExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1D9C6E23250FA9190077B302 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1D9C6E1F250FA9190077B302 /* TheExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D9C6DFA250FA8BD0077B302 /* TransparentProxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransparentProxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +53,12 @@
 		1D9C6E08250FA8BD0077B302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D9C6E09250FA8BD0077B302 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D9C6E0B250FA8BD0077B302 /* TransparentProxy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TransparentProxy.entitlements; sourceTree = "<group>"; };
+		1D9C6E16250FA9190077B302 /* TheExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TheExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D9C6E18250FA9190077B302 /* AppProxyProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppProxyProvider.h; sourceTree = "<group>"; };
+		1D9C6E19250FA9190077B302 /* AppProxyProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppProxyProvider.m; sourceTree = "<group>"; };
+		1D9C6E1B250FA9190077B302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D9C6E1C250FA9190077B302 /* TheExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheExtension.entitlements; sourceTree = "<group>"; };
+		1D9C6E25250FA92E0077B302 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +66,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D9C6E27250FA99C0077B302 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D9C6E13250FA9190077B302 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9C6E26250FA92E0077B302 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,7 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				1D9C6DFC250FA8BD0077B302 /* TransparentProxy */,
+				1D9C6E17250FA9190077B302 /* TheExtension */,
 				1D9C6DFB250FA8BD0077B302 /* Products */,
+				1D9C6E24250FA92E0077B302 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1D9C6DFA250FA8BD0077B302 /* TransparentProxy.app */,
+				1D9C6E16250FA9190077B302 /* TheExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +116,25 @@
 			path = TransparentProxy;
 			sourceTree = "<group>";
 		};
+		1D9C6E17250FA9190077B302 /* TheExtension */ = {
+			isa = PBXGroup;
+			children = (
+				1D9C6E18250FA9190077B302 /* AppProxyProvider.h */,
+				1D9C6E19250FA9190077B302 /* AppProxyProvider.m */,
+				1D9C6E1B250FA9190077B302 /* Info.plist */,
+				1D9C6E1C250FA9190077B302 /* TheExtension.entitlements */,
+			);
+			path = TheExtension;
+			sourceTree = "<group>";
+		};
+		1D9C6E24250FA92E0077B302 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D9C6E25250FA92E0077B302 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,15 +145,34 @@
 				1D9C6DF6250FA8BD0077B302 /* Sources */,
 				1D9C6DF7250FA8BD0077B302 /* Frameworks */,
 				1D9C6DF8250FA8BD0077B302 /* Resources */,
+				1D9C6E23250FA9190077B302 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1D9C6E1E250FA9190077B302 /* PBXTargetDependency */,
 			);
 			name = TransparentProxy;
 			productName = TransparentProxy;
 			productReference = 1D9C6DFA250FA8BD0077B302 /* TransparentProxy.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1D9C6E15250FA9190077B302 /* TheExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D9C6E20250FA9190077B302 /* Build configuration list for PBXNativeTarget "TheExtension" */;
+			buildPhases = (
+				1D9C6E12250FA9190077B302 /* Sources */,
+				1D9C6E13250FA9190077B302 /* Frameworks */,
+				1D9C6E14250FA9190077B302 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheExtension;
+			productName = TheExtension;
+			productReference = 1D9C6E16250FA9190077B302 /* TheExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,6 +183,9 @@
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					1D9C6DF9250FA8BD0077B302 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					1D9C6E15250FA9190077B302 = {
 						CreatedOnToolsVersion = 12.0;
 					};
 				};
@@ -117,6 +204,7 @@
 			projectRoot = "";
 			targets = (
 				1D9C6DF9250FA8BD0077B302 /* TransparentProxy */,
+				1D9C6E15250FA9190077B302 /* TheExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +216,13 @@
 			files = (
 				1D9C6E04250FA8BD0077B302 /* Assets.xcassets in Resources */,
 				1D9C6E07250FA8BD0077B302 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D9C6E14250FA9190077B302 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +239,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1D9C6E12250FA9190077B302 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9C6E1A250FA9190077B302 /* AppProxyProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D9C6E1E250FA9190077B302 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D9C6E15250FA9190077B302 /* TheExtension */;
+			targetProxy = 1D9C6E1D250FA9190077B302 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1D9C6E05250FA8BD0077B302 /* Main.storyboard */ = {
@@ -309,6 +420,46 @@
 			};
 			name = Release;
 		};
+		1D9C6E21250FA9190077B302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TheExtension/TheExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TC3Q7MAJXF;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = TheExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adguard.example.TransparentProxy.TheExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1D9C6E22250FA9190077B302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TheExtension/TheExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TC3Q7MAJXF;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = TheExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adguard.example.TransparentProxy.TheExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -326,6 +477,15 @@
 			buildConfigurations = (
 				1D9C6E0F250FA8BD0077B302 /* Debug */,
 				1D9C6E10250FA8BD0077B302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D9C6E20250FA9190077B302 /* Build configuration list for PBXNativeTarget "TheExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D9C6E21250FA9190077B302 /* Debug */,
+				1D9C6E22250FA9190077B302 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
